@@ -2,7 +2,7 @@ import logging
 from typing import Optional
 
 from assertpy import assert_that
-from pytest import CaptureFixture, LogCaptureFixture, fixture
+from pytest import LogCaptureFixture, fixture
 
 from strivelogger import StriveLogger
 from strivelogger.logger_implementations.python_logger import PythonLogger

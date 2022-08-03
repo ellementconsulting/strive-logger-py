@@ -1,10 +1,9 @@
 import json
-import logging
 import traceback
 from typing import Dict, Optional
 
 from assertpy import assert_that
-from pytest import CaptureFixture, LogCaptureFixture, fixture
+from pytest import LogCaptureFixture, fixture
 
 from strivelogger import StriveLogger
 from strivelogger.logger_implementations.python_logger import PythonLogger
