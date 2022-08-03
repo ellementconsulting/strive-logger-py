@@ -4,7 +4,7 @@ project_packages = find_namespace_packages(include=["strivelogger", "strivelogge
 
 setup(
     name="StriveLogger",
-    version="0.0.1",
+    version="0.0.2",
     packages=project_packages,
     package_data={
         "strivelogger": ["py.typed"],
