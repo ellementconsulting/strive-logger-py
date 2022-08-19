@@ -1,6 +1,7 @@
 # These can be unversioned
 assertpy
 black
+build
 flake8
 flake8-bugbear
 isort
