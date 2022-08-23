@@ -5,8 +5,8 @@ on:
     branches:
       - main
       - ReleaseCI
-    paths:
-      - "pyproject.toml"
+    # paths:
+    #   - "pyproject.toml"
 
 jobs:
   cancel-previous:
