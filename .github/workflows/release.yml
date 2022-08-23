@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - ReleaseCI
     paths:
       - "pyproject.toml"
 
@@ -57,7 +58,9 @@ jobs:
           draft: true
 
   build:
-    name: Build wheels
+    name: Build packages
+    needs: ["create-release"]
+
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
@@ -74,8 +77,9 @@ jobs:
         with:
           python-version: ${{ matrix.version }}
 
-      - run: pip install -r build twine
+      - run: ./build.sh
 
-      - run: python -m build
-
-      - run: python
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.version }}
+          path: dist/
