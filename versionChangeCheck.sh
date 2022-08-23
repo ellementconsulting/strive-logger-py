@@ -1,6 +1,6 @@
 #!/bin/bash
 
-changes="$(git diff origin/main HEAD pyproject.toml | grep 'version =')"
+changes="$(git diff HEAD~1 HEAD pyproject.toml | grep 'version =')"
 
 # echo "[ $changes ]"
 if [ "$changes" != "" ]; then
