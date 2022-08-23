@@ -7,9 +7,8 @@ on:
   push:
     branches:
       - main
-      - ReleaseCI
-    # paths:
-    #   - "pyproject.toml"
+    paths:
+      - "pyproject.toml"
 
 jobs:
   cancel-previous:
@@ -65,7 +64,6 @@ jobs:
         with:
           generate_release_notes: true
           tag_name: ${{ needs.check.outputs.newVersion }}
-          draft: true
           files: dist/**
 
       - run: ./release.sh ${{ secrets.PYPI_TOKEN }}
