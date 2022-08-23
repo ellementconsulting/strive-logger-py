@@ -1,5 +1,5 @@
 #!/bin/bash
 
-pip install -r build twine
+python3 -m pip install --upgrade build
 rm -rf dist/
 python -m build
