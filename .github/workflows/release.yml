@@ -72,7 +72,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v2
         with:
-          python-version: $PYTHON_VERSION
+          python-version: ${{env.PYTHON_VERSION}}
 
       - run: ./build.sh
       - run: ./release ${{ secrets.PYPI_TOKEN }}
